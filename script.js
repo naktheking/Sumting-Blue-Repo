@@ -1,8 +1,8 @@
 const arr = []; // particles
 const c = document.querySelector("canvas");
 const ctx = c.getContext("2d");
-const cw = (c.width = 3000);
-const ch = (c.height = 3000);
+const cw = (c.width = 2700);
+const ch = (c.height = 2700);
 
 const c2 = c.cloneNode(true);
 c2.width = cw;
