@@ -65,9 +65,9 @@
 }
 
 /* Also pause on hover (CSS-only fallback) */
-.carousel-track-wrap:hover .carousel-set {
+/* .carousel-track-wrap:hover .carousel-set {
   animation-play-state: paused;
-}
+} */
 
 @keyframes scroll-left {
   from { transform: translateX(0); }
