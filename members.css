@@ -120,6 +120,7 @@
 .flip-card__img {
   width: 100%;
   flex: 1;
+  min-height: 0;
   object-fit: cover;
   display: block;
   filter: brightness(0.85) saturate(0.85);

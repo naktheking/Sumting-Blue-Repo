@@ -24,7 +24,7 @@ function start() {
   ctx2.clearRect(0, 0, cw, ch);
   ctx2.drawImage(txtImg, drawX, drawY, drawWidth, drawHeight);
 
-  for (let i = 0; i < 500; i++) makeFlake(i, true);
+  for (let i = 0; i < 250; i++) makeFlake(i, true);
 
   ctx.fillStyle = "#1792e5";
   gsap.ticker.add(render);
