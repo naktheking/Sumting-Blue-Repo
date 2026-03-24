@@ -38,6 +38,81 @@ canvas {
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap');
 
+/* ── Navigation ── */
+
+.nav {
+  position: fixed;
+  top: clamp(20px, 4vh, 44px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: clamp(28px, 6vw, 72px);
+}
+
+.nav-link {
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+/* The underline track (always visible, very dim) */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* The animated underline */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(180, 220, 255, 0.9) 40%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(180, 220, 255, 0.9) 60%,
+    transparent
+  );
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease;
+  opacity: 0;
+  box-shadow: 0 0 8px rgba(140, 200, 255, 0.6);
+}
+
+.nav-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* ── Frost Button ── */
+
 .frost-btn {
   position: fixed;
   bottom: clamp(24px, 5vh, 52px);

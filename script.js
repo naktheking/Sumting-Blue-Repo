@@ -3,12 +3,10 @@ const c = document.querySelector("canvas");
 const ctx = c.getContext("2d");
 const cw = (c.width = 2700);
 const ch = (c.height = 2700);
-
 const c2 = c.cloneNode(true);
 c2.width = cw;
 c2.height = ch;
 const ctx2 = c2.getContext("2d", { willReadFrequently: true });
-
 const txtImg = document.querySelector(".text-img");
 
 txtImg.onload = start;
@@ -28,7 +26,7 @@ function start() {
 
   for (let i = 0; i < 500; i++) makeFlake(i, true);
 
-  ctx.fillStyle = "#fff";
+  ctx.fillStyle = "#1792e5";
   gsap.ticker.add(render);
 }
 
