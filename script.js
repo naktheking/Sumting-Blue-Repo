@@ -68,7 +68,7 @@ function render() {
         const b = d.data[2];
         const isWhite = r > 200 && g > 200 && b > 200;
 
-        if (isWhite && Math.random() > 0.2) {
+        if (isWhite && Math.random() > 0.00001) {
           flake.t.pause();
           if (arr.length < 1800) makeFlake(arr.length, false);
         }
