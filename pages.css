@@ -50,6 +50,16 @@ body {
   text-shadow: 0 0 60px rgba(140, 200, 255, 0.25);
 }
 
+.page-description {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.85rem, 2vw, 1.2rem);
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.45);
+  margin: -0.6em 0 1.8em;
+}
+
+
 .page-body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
@@ -60,6 +70,8 @@ body {
   max-width: 640px;
   margin: 0;
 }
+
+
 
 /* ── About page two-column layout ── */
 
@@ -120,6 +132,82 @@ body {
 .about-image-wrap:hover .about-image {
   filter: brightness(1) saturate(1);
   transform: scale(1.03);
+}
+
+/* ── Set List ── */
+
+.setlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.setlist li {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.85rem, 1.6vw, 1rem);
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.75);
+  padding: 0.55em 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.setlist li:first-child {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.setlist li.featured {
+  color: rgba(200, 230, 255, 0.9);
+}
+
+.setlist li.hidden {
+  display: none;
+}
+
+.show-more-btn {
+  display: block;
+  margin: 1.6em auto 0;
+  background: none;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: clamp(0.7rem, 1.3vw, 0.85rem);
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(180, 220, 255, 0.75);
+  cursor: pointer;
+  padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.show-more-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(180, 220, 255, 0.7) 40%,
+    rgba(255, 255, 255, 0.9) 50%,
+    rgba(180, 220, 255, 0.7) 60%,
+    transparent
+  );
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.8;
+}
+
+.show-more-btn:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.show-more-btn:hover::after {
+  transform: scaleX(1);
 }
 
 /* Stack vertically on narrow screens */
