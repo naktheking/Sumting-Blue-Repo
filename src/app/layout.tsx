@@ -1,16 +1,15 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Fontdiner_Swanky, Inter, IBM_Plex_Mono } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { MotionProvider } from "@/components/motion-provider";
 import { Preloader } from "@/components/preloader";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const fontdiner = Fontdiner_Swanky({
   subsets: ["latin"],
-  variable: "--font-fraunces",
-  style: ["normal", "italic"],
-  axes: ["SOFT", "opsz"],
+  weight: ["400"],
+  variable: "--font-fontdiner",
 });
 
 const inter = Inter({
@@ -43,7 +42,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}
+      className={`${fontdiner.variable} ${inter.variable} ${plexMono.variable}`}
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInit }} />

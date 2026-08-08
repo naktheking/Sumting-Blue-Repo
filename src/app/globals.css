@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-paper: #f3efe5;
-  --color-paper-dim: #eae5d6;
+  --color-paper: #f6ecd2; /* cream */
+  --color-paper-dim: #ece0c2;
   --color-ink: #1a1c23;
-  --color-cobalt: #2547d0;
+  --color-cobalt: #62b5e5; /* PMS 2915 — main */
   --color-muted: #5d6068;
-  --color-amber: #b4690e;
+  --color-amber: #004c97; /* PMS 2945 — secondary */
 
-  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-fontdiner), Georgia, serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-plex-mono), ui-monospace, monospace;
 
@@ -48,17 +48,12 @@
 
 /* Night version of the print palette: same ink-on-paper logic, inverted */
 .dark {
-  --color-paper: #15171f;
-  --color-paper-dim: #1c1f29;
-  --color-ink: #ede8db;
-  --color-cobalt: #6b87ff;
-  --color-muted: #9b9ea9;
-  --color-amber: #d99b4e;
-}
-
-/* Fraunces' SOFT axis rounds the sharp corners of the letterforms */
-.font-display {
-  font-variation-settings: "SOFT" 85;
+  --color-paper: #0a0a0c; /* black — dark-mode background */
+  --color-paper-dim: #16161a;
+  --color-ink: #f6ecd2; /* cream text on black */
+  --color-cobalt: #9dd3f2; /* PMS 2915, lifted for the blue bg */
+  --color-muted: #b7c9df;
+  --color-amber: #8fd0f5; /* secondary, lifted so it reads on the blue bg */
 }
 
 html {
@@ -73,7 +68,7 @@ body {
 }
 
 ::selection {
-  background-color: var(--color-cobalt);
+  background-color: var(--color-amber);
   color: var(--color-paper);
 }
 
